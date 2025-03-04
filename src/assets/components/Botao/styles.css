@@ -1,0 +1,21 @@
+
+button{
+    padding: 5px 10px;
+    min-width: 140px;
+    border-radius: 10px;
+    background-color: var(--primary-light);
+    color: var(--neutral-white);
+    text-decoration: none;
+    border: none;
+    transition: .3s;
+    font-size: 16px;
+
+    &:hover{
+        cursor:pointer;
+        transform: scale(1.1);
+        background-color: var(--neutral-white);
+        color: var(--primary-light);
+        box-shadow: 0 0 5px 0px var(--primary-light);
+        font-weight: 700;
+    }
+}
