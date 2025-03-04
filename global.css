@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 :root{
     --primary-main: #8663EA;
@@ -42,11 +43,18 @@ body{
 
 }
 
-a, button {
+a, button, #toggle {
     cursor: url('./src/assets/images/cursor-pointer.cur') 14 0, pointer;
 }
 
 ::selection {
     background-color: var(--primary-light); /* Cor de fundo do texto selecionado */
     color: #FFFFFF;            /* Cor do texto selecionado */
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        margin-top: 87.59px;
+    }
+    
 }

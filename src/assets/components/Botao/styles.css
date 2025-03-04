@@ -2,7 +2,7 @@
 button{
     padding: 5px 10px;
     min-width: 140px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: var(--primary-light);
     color: var(--neutral-white);
     text-decoration: none;

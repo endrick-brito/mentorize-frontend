@@ -18,8 +18,7 @@ section{
         color: var(--neutral-white);
         
         & span{
-            color: transparent;
-            -webkit-text-stroke: 1px var(--primary-light);
+            color: var(--primary-light);
         }
     }
 
