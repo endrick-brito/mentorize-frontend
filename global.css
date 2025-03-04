@@ -27,6 +27,9 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    cursor: url('./src/assets/images/cursor.cur'), auto;
+    caret-color: var(--primary-light);
+
 }
 
 html, body{
@@ -36,4 +39,14 @@ html, body{
 body{
     margin-top: 80px;
     background-color: var(--neutral-background);
+
+}
+
+a, button {
+    cursor: url('./src/assets/images/cursor-pointer.cur') 14 0, pointer;
+}
+
+::selection {
+    background-color: var(--primary-light); /* Cor de fundo do texto selecionado */
+    color: #FFFFFF;            /* Cor do texto selecionado */
 }
