@@ -1,4 +1,4 @@
-section{
+#section1{
     width: 100%;
     height: 450px;
     background-color: var(--secondary-dark);
@@ -8,6 +8,7 @@ section{
     justify-content: start;
     flex-direction: column;
     text-align: center;
+    padding-inline: 10%;
     gap: 30px;
     background: rgb(41,41,41);
     background: linear-gradient(234deg, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 85%, rgb(91, 73, 143) 120%);

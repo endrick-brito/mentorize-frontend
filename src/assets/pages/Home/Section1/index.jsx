@@ -6,7 +6,7 @@ import mentor3 from './img/mentor3.png'
 
 function Section1(){
     return(
-        <section>
+        <section id='section1'>
             <div id="imgs">
                 <div className="img"><img src={mentor1} alt="Mentor" /></div>
                 <div className="img"><img src={mentor2} alt="Mentor" /></div>
