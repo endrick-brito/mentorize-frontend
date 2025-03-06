@@ -24,7 +24,7 @@ section#section2{
             border: 2px solid var(--primary-light);
             padding: 5px 10px;
             color: var(--neutral-white);
-            animation: neon infinite 3s;
+            animation: neon infinite 10s;
         }
     }
 
