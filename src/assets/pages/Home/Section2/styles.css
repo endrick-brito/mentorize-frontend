@@ -1,5 +1,4 @@
 section#section2{
-    height: 100vh;
     width: 100%;
     background: linear-gradient(280deg, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 85%, rgb(91, 73, 143) 120%);
     display: flex;
@@ -9,10 +8,6 @@ section#section2{
     padding-inline: 10%;
     gap: 40px;
     color: var(--neutral-white);
-
-    & hr{
-        width: 100%;
-    }
 
     & .titulo{
         display: flex;
@@ -35,15 +30,15 @@ section#section2{
     & h3{
         color: rgba(234, 234, 234, 0.4);
         font-weight: 400;
-        max-width: 50%;
+        max-width: 90%;
         text-align: center;
     }
 
     & #cards{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        width: 90%;
-        height: 350px;
+        width: 90vw;
+        height: fit-content ;
         gap: 56px;
 
         & .card{
@@ -84,4 +79,15 @@ section#section2{
     100%{
         box-shadow: 0 0 5px 0 var(--primary-light);
     }
+}
+
+@media screen and (max-width: 1000px) {
+    section#section2{
+        padding-inline: 2%;
+
+        & #cards{
+            grid-template-columns: 1fr !important;
+        }
+    }
+
 }
