@@ -5,9 +5,11 @@ section#section2{
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    padding-block: 100px;
     padding-inline: 10%;
     gap: 40px;
     color: var(--neutral-white);
+    text-align: center;
 
     & .titulo{
         display: flex;
@@ -17,9 +19,8 @@ section#section2{
         & .text{
             border-radius: 30px;
             border: 2px solid var(--primary-light);
-            padding: 5px 10px;
+            padding: 5px 20px;
             color: var(--neutral-white);
-            animation: neon infinite 10s;
         }
     }
 
@@ -63,24 +64,6 @@ section#section2{
     }
 }
 
-@keyframes neon {
-    0%{
-        box-shadow: 0 0 5px 0 var(--primary-light);
-    }
-    25%{
-        box-shadow: 0 0 5px 0 cyan;
-    }
-    50%{
-        box-shadow: 0 0 15px 0 red;
-    }
-    75%{
-        box-shadow: 0 0 15px 0 green;  
-    }
-    100%{
-        box-shadow: 0 0 5px 0 var(--primary-light);
-    }
-}
-
 @media screen and (max-width: 1000px) {
     section#section2{
         padding-inline: 2%;
@@ -90,4 +73,12 @@ section#section2{
         }
     }
 
+}
+
+@media screen and (max-width: 400px) {
+    section#section2{
+        & .titulo{
+            display: none;
+        }
+    }
 }
