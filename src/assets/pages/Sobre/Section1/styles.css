@@ -1,31 +1,84 @@
 #sobre {
     width: 100%;
-    margin: 50px auto;
-    padding: 20px;
-    background: var(--secondary-dark);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    color: var(--neutral-white);
     display: flex;
-    justify-content: center;
-}
+    justify-content: space-between;
+    padding: 100px 200px;
+    color: var(--neutral-white);
+    gap: 50px;
+    background: linear-gradient(234deg, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 85%, rgb(91, 73, 143) 120%);
 
-#sobre div{
-    max-width: 900px;
-}
+    & div.imagemMentorize{
+        max-width: 600px;
+        max-height: 600px;
+        min-width: 600px;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary-main);
+        border-radius: 20px;
+        border: 1px solid var(--primary-light)
+    }
 
-#sobre h2 {
-    text-align: center;
+    & div.content{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
 
-}
+        & h1{
+            font-size: 2rem;
+        }
 
-#sobre ul {
-    list-style: none;
-    padding: 0;
-}
+        & p{
+            color: var(--neutral-text);
+        }
 
-#sobre li {
-    background: var(--secondary-light);
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+        & hr.titulo{
+            margin-block: 10px;
+            border: none;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-main); /* Azul */
+        }
+
+        & div{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            & hr{
+                width: 50px;
+                border: none;
+                height: 2px;
+                background-color: var(--primary-light);
+                margin-top: -15px;
+            }
+        }
+
+        & ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 10px;
+            & li{
+                background-color: var(--secondary-main);
+                padding: 10px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                & i{
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--secondary-light);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
