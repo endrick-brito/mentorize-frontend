@@ -24,7 +24,7 @@ function Header(){
             <Link to="/"><img src={logo} alt="Logotipo" id="logo"/></Link>
             <ul id="nav" className={menuAberto? "visivel": "oculto"}>
                 <li><Link to="/">Inicio</Link></li>
-                <li><Link to="/">Sobre</Link></li>
+                <li><Link to="/Sobre">Sobre</Link></li>
                 <li><Link to="/">Preços</Link></li>
                 <li><Link to="/">Contato</Link></li>
             </ul>

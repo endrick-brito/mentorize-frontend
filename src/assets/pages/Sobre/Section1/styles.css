@@ -1,0 +1,31 @@
+#sobre {
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--secondary-dark);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--neutral-white);
+    display: flex;
+    justify-content: center;
+}
+
+#sobre div{
+    max-width: 900px;
+}
+
+#sobre h2 {
+    text-align: center;
+
+}
+
+#sobre ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sobre li {
+    background: var(--secondary-light);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
