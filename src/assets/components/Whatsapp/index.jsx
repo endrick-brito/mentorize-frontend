@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import logo from './img/whatsapp.png'
-import './styles.css'
+import styles from './Whatsapp.module.css'
 
 function Whatsapp(){
     return(
         <>
-            <Link to="https://web.whatsapp.com" id="btn_whatsapp"><img src={logo}/></Link>
+            <Link to="https://web.whatsapp.com" className={styles.btn_whatsapp}><img src={logo}/></Link>
         </>
     )
 }
