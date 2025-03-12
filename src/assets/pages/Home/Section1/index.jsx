@@ -14,7 +14,7 @@ function Section1(){
             </div>
             <h1><span>Ensine</span> Com Facilidade</h1>
             <h3>Com o Mentorize, você cria, gerencia seus cursos e finanças com facilidade.</h3>
-            <Botao url="/" text="Comece Agora"/>
+            <Botao url="/registro" text="Comece Agora"/>
         </section>
     )
 }
