@@ -1,16 +1,16 @@
-import './styles.css'
+import styles from './Section1.module.css'
 import logo from '../../../images/logo-horizontal-transparente.png'
 
 function Section1(){
     return(
-        <section id="sobre">
-            <div className="imagemMentorize">
+        <section className={styles.sobre}>
+            <div className={styles.imagemMentorize}>
                 <img src={logo} alt="logotipo da mentorize" />
             </div>
-            <div className='content'>
+            <div className={styles.content}>
                 <div>
                     <h1>Sobre Nós</h1>
-                    <hr className='titulo'/>
+                    <hr className={styles.titulo}/>
                     <p>A Mentorize é a plataforma ideal para instrutores que desejam gerenciar seus cursos de forma simples e eficiente. Criado para facilitar a vida de educadores, ele permite o gerenciamento completo de turmas, conteúdos e finanças em um só lugar.</p>
                 </div>
                 <div>

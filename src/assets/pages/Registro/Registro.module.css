@@ -1,54 +1,80 @@
-.registro{
+.registro {
     margin-top: -80px;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(234deg, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 85%, rgb(91, 73, 143) 120%);
+    background: linear-gradient(234deg, rgba(41, 41, 41, 1) 0%, rgba(41, 41, 41, 1) 85%, rgb(91, 73, 143) 120%);
     display: flex;
-
-    & .esquerda, .direita{
+    flex-direction: row-reverse;
+    & .esquerda,
+    .direita {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    & .direita{
-        & form{
+    & .esquerda {
+        background-image: url("./img/imagem.png");
+        background-size: cover;
+        margin: 35px;
+        border-radius: 20px;
+
+        & a{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+
+        
+    }
+
+
+
+    & .direita {
+        & form {
+            box-sizing: border-box;
             width: 70%;
             display: flex;
             flex-direction: column;
             text-align: center;
             gap: 50px;
 
-            & a{
+            & a {
                 text-decoration: none;
                 color: var(--primary-light);
             }
 
-            & p, label{
+            & p,
+            label {
                 color: var(--neutral-text);
                 font-size: 1.2rem;
             }
 
             & input[type="text"],
             input[type="email"],
-            input[type="password"]{
+            input[type="password"] {
                 background-color: var(--secondary-main);
                 border: none;
                 font-size: 18px;
                 padding: 20px 15px;
                 border-radius: 10px;
                 outline: none;
-                flex-grow: 1;
+                width: 100%;
                 color: var(--neutral-text);
             }
 
-            & input[type="checkbox"]{
+            & input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="password"]:focus {
+                box-shadow: 0px 0px 10px 0px var(--primary-light);
+            }
+
+            & input[type="checkbox"] {
                 height: 30px;
                 width: 30px;
             }
 
-            & button{
+            & button {
                 height: 60px;
                 background-color: var(--primary-main);
                 padding: 5px 10px;
@@ -61,8 +87,8 @@
                 font-size: 16px;
             }
 
-            
-            & button:hover{
+
+            & button:hover {
                 transform: scale(1);
                 background-color: var(--neutral-white);
                 color: var(--primary-light);
@@ -70,25 +96,51 @@
                 font-weight: 700;
             }
 
-            & .titulo{
-                & h1{
+            & .titulo {
+                & h1 {
                     color: var(--neutral-white);
                     font-size: 2rem;
                 }
 
             }
 
-            & .campos{
+            & .campos {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
                 justify-content: center;
+
                 & .campo {
                     display: flex;
-                    gap: 20px;
+                    gap: 30px;
                 }
             }
 
         }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .esquerda{
+        width: 30% !important;
+    }
+    .direita{
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .esquerda{
+        display: none !important;
+    }
+    .direita{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    & .campo {
+        flex-direction: column;
+        gap: 30px;
     }
 }

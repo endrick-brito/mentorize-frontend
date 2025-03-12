@@ -1,11 +1,12 @@
 import styles from './Registro.module.css';
 import { Link } from 'react-router-dom';
+import Botao from '../../components/Botao'
 
 function Registro() {
     return (
         <section className={styles.registro}>
             <div className={styles.esquerda}>
-                
+                <Botao text="voltar" url="/"/>
             </div>
             <div className={styles.direita}>
                 <form>

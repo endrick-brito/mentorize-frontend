@@ -1,4 +1,4 @@
-section#section2{
+.section2{
     width: 100%;
     background: linear-gradient(280deg, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 85%, rgb(91, 73, 143) 120%);
     display: flex;
@@ -35,7 +35,7 @@ section#section2{
         text-align: center;
     }
 
-    & #cards{
+    & .cards{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 90vw;
@@ -65,10 +65,10 @@ section#section2{
 }
 
 @media screen and (max-width: 1000px) {
-    section#section2{
+    .section2{
         padding-inline: 2%;
 
-        & #cards{
+        & .cards{
             grid-template-columns: 1fr !important;
         }
     }
@@ -76,7 +76,7 @@ section#section2{
 }
 
 @media screen and (max-width: 400px) {
-    section#section2{
+    .section2{
         & .titulo{
             display: none;
         }
