@@ -6,7 +6,7 @@ function Registro() {
     return (
         <section className={styles.registro}>
             <div className={styles.esquerda}>
-                <Botao text="voltar" url="/"/>
+                <Botao text={<i className="bi bi-arrow-left"></i>} url="/"/>
             </div>
             <div className={styles.direita}>
                 <form>
