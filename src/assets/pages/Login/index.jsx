@@ -1,11 +1,11 @@
-import styles from './Registro.module.css';
+import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 import Botao from '../../components/Botao'
 import Logo from '../../images/logo-horizontal-transparente.png'
 
-function Registro() {
+function Login() {
     return (
-        <section className={styles.registro}>
+        <section className={styles.login}>
             <div className={styles.esquerda}>
                 <Botao text={<i className="bi bi-arrow-left"></i>} url="/" />
                 <img src={Logo} alt="" />
@@ -20,33 +20,26 @@ function Registro() {
             <div className={styles.direita}>
                 <form>
                     <div className={styles.titulo}>
-                        <h1>Criar Conta</h1>
-                        <p>Ja possui uma conta? <Link to="/login">Entrar</Link></p>
+                        <h1>Entrar na Conta</h1>
+                        <p>Ainda nao possui uma conta? <Link to="/registro">Registrar</Link></p>
                     </div>
                     <div className={styles.campos}>
                         <div className={styles.campo}>
-                            <input type="text" id='nome' placeholder='Nome' required/>
-                            <input type="text" id='sobrenome' placeholder='Sobrenome' required/>
+                            <input type="email" id='email' placeholder='Email' />
                         </div>
                         <div className={styles.campo}>
-                            <input type="email" id='email' placeholder='Email' required/>
+                            <input type="password" id='senha' placeholder='Senha' />
                         </div>
                         <div className={styles.campo}>
-                            <input type="password" id='senha' placeholder='Senha' required/>
-                        </div>
-                        <div className={styles.campo}>
-                            <input type="password" id='confirma_senha' placeholder='Repita a senha' required/>
-                        </div>
-                        <div className={styles.campo}>
-                            <input type="checkbox" name="termos" id="termos" required/>
-                            <label htmlFor="termos">Eu aceito os <Link to="#">Termos e Condições</Link></label>
+                            <input type="checkbox" name="termos" id="termos" />
+                            <label htmlFor="termos">Salvar dados</label>
                         </div>
                     </div>
-                    <button type="submit">Criar Conta</button>
+                    <button type="submit">Entrar</button>
                 </form>
             </div>
         </section>
     );
 }
 
-export default Registro;
+export default Login;
