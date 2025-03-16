@@ -2,8 +2,57 @@ import styles from './Registro.module.css';
 import { Link } from 'react-router-dom';
 import Botao from '../../components/Botao'
 import Logo from '../../images/logo-horizontal-transparente.png'
+import { useState } from "react";
+import api from "../../../services/api.js";
 
 function Registro() {
+    const [instrutor, setInstrutor] = useState({
+        nome: "",
+        sobrenome: "",
+        email: "",
+        senha: "",
+        confirmarSenha: "",
+    });
+
+    const handleChange = (e) => {
+        setInstrutor({ ...instrutor, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (instrutor.senha !== instrutor.confirmarSenha) {
+            alert("As senhas não coincidem!");
+            return;
+        }
+
+        try {
+            const response = await api.post("", {
+                nome: instrutor.nome,
+                sobrenome: instrutor.sobrenome,
+                email: instrutor.email,
+                senha: instrutor.senha, 
+            });
+
+            console.log("Instrutor cadastrado com sucesso:", response.data);
+            alert("Cadastro realizado!");
+            
+            // Limpar os campos após o cadastro
+            setInstrutor({
+                nome: "",
+                sobrenome: "",
+                email: "",
+                senha: "",
+                confirmarSenha: "",
+            });
+
+        } catch (error) {
+            console.error("Erro ao cadastrar instrutor email já utilizado:", error);
+            alert("Erro ao cadastrar ou email já utilizado. Tente novamente!");
+        }
+    };
+
+
     return (
         <section className={styles.registro}>
             <div className={styles.esquerda}>
@@ -18,24 +67,24 @@ function Registro() {
                 </div>
             </div>
             <div className={styles.direita}>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={styles.titulo}>
                         <h1>Criar Conta</h1>
                         <p>Ja possui uma conta? <Link to="/login">Entrar</Link></p>
                     </div>
                     <div className={styles.campos}>
                         <div className={styles.campo}>
-                            <input type="text" id='nome' placeholder='Nome' required/>
-                            <input type="text" id='sobrenome' placeholder='Sobrenome' required/>
+                            <input type="text" id='nome' placeholder='Nome' name='nome' value={instrutor.nome} onChange={handleChange} required/>
+                            <input type="text" id='sobrenome' placeholder='Sobrenome' name='sobrenome' value={instrutor.sobrenome} onChange={handleChange} required/>
                         </div>
                         <div className={styles.campo}>
-                            <input type="email" id='email' placeholder='Email' required/>
+                            <input type="email" id='email' placeholder='Email' name='email' value={instrutor.email} onChange={handleChange} required/>
                         </div>
                         <div className={styles.campo}>
-                            <input type="password" id='senha' placeholder='Senha' required/>
+                            <input type="password" id='senha' placeholder='Senha' name='senha' value={instrutor.senha} onChange={handleChange} required/>
                         </div>
                         <div className={styles.campo}>
-                            <input type="password" id='confirma_senha' placeholder='Repita a senha' required/>
+                            <input type="password" id='confirmarSenha' placeholder='Repita a senha' name='confirmarSenha' value={instrutor.confirmarSenha} onChange={handleChange} required/>
                         </div>
                         <div className={styles.campo}>
                             <input type="checkbox" name="termos" id="termos" required/>
